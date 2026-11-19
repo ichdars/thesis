@@ -1,0 +1,18 @@
+# Instanzen und unfertige Downloads
+data/instances/
+*.cnf
+*.cnf.xz
+*.part
+
+# GBD-Datenbanken (groß, jederzeit neu ladbar)
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / System
+.vscode/
+.DS_Store
