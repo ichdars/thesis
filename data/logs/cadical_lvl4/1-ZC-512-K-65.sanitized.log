@@ -1,0 +1,173 @@
+c run.sh: index                
+c run.sh: benchmark            1-ZC-512-K-65.sanitized
+c run.sh: path                 /usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/1-ZC-512-K-65.sanitized-pre100k.cnf.xz
+c run.sh: job                  
+c run.sh: task                 
+c run.sh: host                 ccaexe11
+c run.sh: cpu                  AMD EPYC 7343 16-Core Processor
+c run.sh: os                   Linux ccaexe11 6.8.0-117-generic #117-Ubuntu SMP PREEMPT_DYNAMIC Tue May  5 19:26:24 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2025
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 3.0.0-0i 303aa169a39d43b1f758eef8599c459d6430d43b
+c g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 -Wall -Wextra -O3 -DNDEBUG -DPROFILE_MODE
+c Wed Jun 3 10:32:42 AM CEST 2026 Linux ccaexe11 6.8.0-117-generic x86_64
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/1-ZC-512-K-65.sanitized-pre100k.cnf.xz'
+c opening pipe to read '/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/1-ZC-512-K-65.sanitized-pre100k.cnf.xz'
+c found '/usr/bin/xz' in path for 'xz'
+c found 'p cnf 48353 226736' header
+c parsed 226736 clauses in 0.12 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --profile=4                    (different from default '2')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reduction conflicts       size tier2        variables
+c         MB    restarts   redundant    glue  trail          remaining
+c          level     rate       size/glu tier1  irredundant
+c 
+c *  0.12 38  0 0   0  0    0    0 0.0 0 0 2 6  0% 226736 30183 100%
+c (  0.15 38  0 0   0  0    0    0 0.0 0 0 2 6  0% 226736 30183 100%
+c .  0.15 38  0 0   0  0    0    0 0.0 0 0 2 6  0% 226736 30183 100%
+c c  0.40 55  0 0   0  0    0    0 0.0 0 0 2 6  0% 226730 30180 100%
+c d  0.44 55  0 0   0  0    0    0 0.0 0 0 2 6  0% 226701 30179 100%
+c f  1.12 52  0 0   0  0    0    0 0.0 0 0 2 6  0% 208940 36851 122%
+c e  1.35 53  0 0   0  0    0    0 0.0 0 0 2 6  0% 208795 36523 121%
+c s  1.39 56  0 0   0  0    0    0 0.0 0 0 2 6  0% 208795 36523 121%
+c s  1.50 56  0 0   0  0    0    0 0.0 0 0 2 6  0% 208792 36523 121%
+c P  1.64 54  0 0   0  0    0    0 0.0 0 0 2 6  0% 208792 36523 121%
+c )  1.64 54  0 0   0  0    0    0 0.0 0 0 2 6  0% 208792 36523 121%
+c {  1.64 54  0 0   0  0    0    0 0.0 0 0 2 6  0% 208792 36523 121%
+c -  1.74 54 302 1  20  8  300  267 2.4 7 3 2 6 38% 208792 36523 121%
+c i  1.79 54 265 1  46 12  443  375 2.2 8 4 2 6 39% 208792 36513 121%
+c i  1.79 54 264 1  46 12  444  375 2.2 8 3 2 6 39% 208792 36512 121%
+c i  1.79 54 258 1  47 11  455  378 2.2 8 3 2 6 38% 208792 36509 121%
+c -  2.06 61 187 2 136 19  881  628 2.2 11 5 2 6 37% 208620 36509 121%
+c }  2.10 61 180 2 151 19 1016  702 2.3 12 5 2 6 36% 208620 36509 121%
+c [  2.11 61  0 2 151  0 1016  702 0.0 0 0 2 6  0% 208620 36509 121%
+c O  2.11 61 182 2 151 183 1017  703 1.2 5 4 2 6  2% 208620 36509 121%
+c 
+c  seconds   reduction conflicts       size   tier2        variables
+c         MB     restarts   redundant     glue   trail          remaining
+c           level     rate       size/glue  tier1  irredundant
+c 
+c ]  2.16 61 385 2 151  5 1466 1106 2.9 28 10 2 6 29% 208620 36509 121%
+c 1  2.16 61 385 2 151  5 1466 1106 2.9 28 10 2 6 29% 208620 36509 121%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s SATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         1.50   73.14% preprocess
+c         1.42   69.34% simplify
+c         0.67   32.77% factor
+c         0.55   26.73% search
+c         0.46   22.52% unstable
+c         0.30   14.85% fastelim
+c         0.26   12.77% propagate
+c         0.25   12.26% propunstable
+c         0.25   12.06% congruence
+c         0.13    6.39% extract
+c         0.12    5.75% parse
+c         0.11    5.52% connect
+c         0.11    5.44% subsume
+c         0.11    5.16% reduce
+c         0.09    4.46% collect
+c         0.06    3.17% extractites
+c         0.06    2.91% stable
+c         0.06    2.88% decompose
+c         0.05    2.59% analyze
+c         0.05    2.40% extractxors
+c         0.04    1.87% analyzeunstable
+c         0.03    1.69% decide
+c         0.03    1.56% extractbinaries
+c         0.03    1.37% propstable
+c         0.03    1.32% backward
+c         0.03    1.30% lucky
+c         0.02    1.22% deduplicate
+c         0.02    0.89% analyzestable
+c         0.02    0.82% extractands
+c         0.02    0.82% congruencematching
+c         0.01    0.71% copy
+c         0.01    0.63% congruencemerge
+c         0.01    0.52% restart
+c         0.01    0.27% shrink
+c         0.01    0.26% bump
+c         0.00    0.16% minimize
+c         0.00    0.11% backbone
+c   =================================
+c         2.05   94.49% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c backbone:                     65         0.18 %  of vars
+c chronological:               746        50.89 %  of conflicts
+c conflicts:                  1466       716.69    per second
+c congruence:                    1      1466.00    interval
+c decisions:                 21255     10391.00    per second
+c eliminated:                  328         0.89 %  of all variables
+c factored:                   6672        18.10 %  of variables
+c fixed:                        17         0.05 %  of all variables
+c learned:                    1299        88.61 %  per conflict
+c learned_lits:              27979       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                   4492        16.05 %  learned literals
+c minishrunken:               1156         4.13 %  learned literals
+c otfs:                         47         3.21 %  of conflict
+c propagations:            2504124         1.22 M  per second
+c reduced:                     101         6.89 %  per conflict
+c rephased:                      1      1466.00    interval
+c restarts:                    151         9.71    interval
+c stabilizing:                   1        30.42 %  of conflicts
+c substituted:                   1         0.00 %  of all variables
+c subsumed:                    103         0.04 %  of all clauses
+c strengthened:                 89         0.03 %  of all clauses
+c ticks:                  45665519        18.33    propagation
+c weakened:                   1134         3.45    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ glue usage ] ---------------------------------------------------------
+c 
+c focused glue 2 used 129 clauses 22.99% accumulated 46.16% tier1
+c focused glue 3 used 71 clauses 12.65% accumulated 58.82%
+c focused glue 4 used 68 clauses 12.12% accumulated 70.94%
+c focused glue 5 used 43 clauses 7.664% accumulated 78.60%
+c focused glue 6 used 24 clauses 4.278% accumulated 82.88% tier2
+c 
+c stable glue 2 used 84 clauses 8.888% accumulated 56.93% tier1
+c stable glue 3 used 31 clauses 3.280% accumulated 60.21%
+c stable glue 4-9 used 166 clauses 17.56% accumulated 77.77%
+c stable glue 10 used 19 clauses 2.010% accumulated 79.78%
+c stable glue 11 used 37 clauses 3.915% accumulated 83.70% tier2
+c 
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         2.17    seconds
+c total real time since initialization:            4.42    seconds
+c maximum resident set size of process:           58.96    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 10
+c run.sh: finished             Wed Jun  3 10:34:46 AM CEST 2026

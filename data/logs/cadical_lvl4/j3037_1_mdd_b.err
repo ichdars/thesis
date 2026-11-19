@@ -1,0 +1,24 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/j3037_1_mdd_b-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 11:58:02 2026
+[runlim] child:			287384
+[runlim] sample:		9.94 time, 10.01 real, 21 MB, 48.13 load
+[runlim] sample:		19.94 time, 20.01 real, 22 MB, 48.11 load
+[runlim] sample:		29.94 time, 30.01 real, 27 MB, 48.09 load
+[runlim] end:			Wed Jun  3 11:58:38 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			36.37 seconds
+[runlim] time:			36.24 seconds
+[runlim] space:			27 MB
+[runlim] load:			48.15 maximum
+[runlim] samples:		363

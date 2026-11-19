@@ -1,0 +1,14 @@
+version    3.0.0-0i
+binary     /home/fleury/Documents/repos/cadical-github/build/cadical
+directory  3.0.0-0i-0-profile10
+benchmarks 
+delta      64
+jobs       7
+name       223.0.0-0i0
+options    -n --profile=10
+slurmspace 256G
+slurmtime  5002
+sockets    2
+space      256000
+threads    0
+time       5000

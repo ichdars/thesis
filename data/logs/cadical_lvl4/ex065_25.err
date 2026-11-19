@@ -1,0 +1,44 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/ex065_25-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 11:41:06 2026
+[runlim] child:			286818
+[runlim] sample:		9.92 time, 10.01 real, 61 MB, 48.04 load
+[runlim] sample:		19.93 time, 20.01 real, 59 MB, 48.03 load
+[runlim] sample:		29.92 time, 30.01 real, 54 MB, 48.03 load
+[runlim] sample:		39.92 time, 40.01 real, 58 MB, 48.02 load
+[runlim] sample:		49.93 time, 50.01 real, 64 MB, 48.02 load
+[runlim] sample:		59.92 time, 60.01 real, 60 MB, 48.01 load
+[runlim] sample:		69.92 time, 70.01 real, 67 MB, 48.01 load
+[runlim] sample:		79.92 time, 80.01 real, 60 MB, 48.01 load
+[runlim] sample:		89.92 time, 90.01 real, 68 MB, 48.01 load
+[runlim] sample:		99.92 time, 100.01 real, 73 MB, 48.01 load
+[runlim] sample:		109.92 time, 110.01 real, 73 MB, 48.00 load
+[runlim] sample:		119.92 time, 120.01 real, 73 MB, 48.00 load
+[runlim] sample:		129.92 time, 130.01 real, 74 MB, 48.00 load
+[runlim] sample:		139.91 time, 140.01 real, 74 MB, 48.00 load
+[runlim] sample:		149.91 time, 150.01 real, 77 MB, 48.00 load
+[runlim] sample:		159.92 time, 160.01 real, 77 MB, 48.00 load
+[runlim] sample:		169.92 time, 170.01 real, 77 MB, 48.00 load
+[runlim] sample:		179.91 time, 180.01 real, 77 MB, 48.00 load
+[runlim] sample:		189.92 time, 190.01 real, 77 MB, 48.00 load
+[runlim] sample:		199.91 time, 200.01 real, 77 MB, 48.00 load
+[runlim] sample:		209.91 time, 210.01 real, 77 MB, 48.08 load
+[runlim] sample:		219.91 time, 220.01 real, 77 MB, 48.07 load
+[runlim] sample:		229.91 time, 230.01 real, 77 MB, 48.06 load
+[runlim] end:			Wed Jun  3 11:45:05 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			239.45 seconds
+[runlim] time:			239.31 seconds
+[runlim] space:			77 MB
+[runlim] load:			48.08 maximum
+[runlim] samples:		2394

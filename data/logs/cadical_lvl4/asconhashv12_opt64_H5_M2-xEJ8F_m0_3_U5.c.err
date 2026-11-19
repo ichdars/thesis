@@ -1,0 +1,22 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/asconhashv12_opt64_H5_M2-xEJ8F_m0_3_U5.c-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 10:57:23 2026
+[runlim] child:			285572
+[runlim] sample:		9.94 time, 10.01 real, 103 MB, 48.09 load
+[runlim] end:			Wed Jun  3 10:57:41 2026
+[runlim] status:		ok
+[runlim] result:		20
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			17.98 seconds
+[runlim] time:			17.85 seconds
+[runlim] space:			137 MB
+[runlim] load:			48.11 maximum
+[runlim] samples:		179

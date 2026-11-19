@@ -1,0 +1,42 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/x9-12001.sat.sanitized-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 13:27:49 2026
+[runlim] child:			290664
+[runlim] sample:		9.98 time, 10.01 real, 8 MB, 48.13 load
+[runlim] sample:		19.98 time, 20.01 real, 9 MB, 48.11 load
+[runlim] sample:		29.97 time, 30.01 real, 9 MB, 48.10 load
+[runlim] sample:		39.97 time, 40.01 real, 11 MB, 48.08 load
+[runlim] sample:		49.97 time, 50.01 real, 11 MB, 48.07 load
+[runlim] sample:		59.97 time, 60.01 real, 12 MB, 48.06 load
+[runlim] sample:		69.97 time, 70.01 real, 13 MB, 48.05 load
+[runlim] sample:		79.97 time, 80.01 real, 11 MB, 48.04 load
+[runlim] sample:		89.97 time, 90.01 real, 12 MB, 47.95 load
+[runlim] sample:		99.97 time, 100.01 real, 14 MB, 47.73 load
+[runlim] sample:		109.96 time, 110.01 real, 14 MB, 47.53 load
+[runlim] sample:		119.97 time, 120.01 real, 13 MB, 47.30 load
+[runlim] sample:		129.97 time, 130.01 real, 15 MB, 47.10 load
+[runlim] sample:		139.96 time, 140.01 real, 15 MB, 47.00 load
+[runlim] sample:		149.96 time, 150.01 real, 15 MB, 46.54 load
+[runlim] sample:		159.96 time, 160.01 real, 15 MB, 46.07 load
+[runlim] sample:		169.96 time, 170.01 real, 15 MB, 45.60 load
+[runlim] sample:		179.97 time, 180.01 real, 15 MB, 44.96 load
+[runlim] sample:		189.96 time, 190.01 real, 15 MB, 44.35 load
+[runlim] sample:		199.96 time, 200.01 real, 16 MB, 43.84 load
+[runlim] sample:		209.97 time, 210.01 real, 15 MB, 43.25 load
+[runlim] end:			Wed Jun  3 13:31:22 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			212.30 seconds
+[runlim] time:			212.16 seconds
+[runlim] space:			16 MB
+[runlim] load:			48.15 maximum
+[runlim] samples:		2122

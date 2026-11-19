@@ -1,0 +1,40 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/marg5x5.shuffled-as.sat03-1455-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 12:00:28 2026
+[runlim] child:			287661
+[runlim] sample:		9.98 time, 10.01 real, 14 MB, 48.05 load
+[runlim] sample:		19.97 time, 20.01 real, 18 MB, 48.04 load
+[runlim] sample:		29.98 time, 30.01 real, 20 MB, 48.04 load
+[runlim] sample:		39.98 time, 40.01 real, 21 MB, 48.03 load
+[runlim] sample:		49.98 time, 50.01 real, 23 MB, 48.03 load
+[runlim] sample:		59.98 time, 60.01 real, 25 MB, 48.02 load
+[runlim] sample:		69.98 time, 70.01 real, 27 MB, 48.02 load
+[runlim] sample:		79.98 time, 80.01 real, 27 MB, 48.10 load
+[runlim] sample:		89.98 time, 90.01 real, 30 MB, 48.08 load
+[runlim] sample:		99.98 time, 100.01 real, 30 MB, 48.15 load
+[runlim] sample:		109.98 time, 110.01 real, 28 MB, 48.20 load
+[runlim] sample:		119.97 time, 120.01 real, 29 MB, 48.17 load
+[runlim] sample:		129.97 time, 130.01 real, 34 MB, 48.15 load
+[runlim] sample:		139.97 time, 140.01 real, 33 MB, 48.12 load
+[runlim] sample:		149.98 time, 150.01 real, 33 MB, 48.10 load
+[runlim] sample:		159.97 time, 160.01 real, 33 MB, 48.09 load
+[runlim] sample:		169.97 time, 170.01 real, 33 MB, 48.07 load
+[runlim] sample:		179.97 time, 180.01 real, 37 MB, 48.06 load
+[runlim] sample:		189.97 time, 190.01 real, 37 MB, 48.05 load
+[runlim] end:			Wed Jun  3 12:03:46 2026
+[runlim] status:		ok
+[runlim] result:		20
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			197.81 seconds
+[runlim] time:			197.68 seconds
+[runlim] space:			37 MB
+[runlim] load:			48.20 maximum
+[runlim] samples:		1977

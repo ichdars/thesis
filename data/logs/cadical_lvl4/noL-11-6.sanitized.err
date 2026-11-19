@@ -1,0 +1,33 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/noL-11-6.sanitized-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 12:24:22 2026
+[runlim] child:			288491
+[runlim] sample:		9.97 time, 10.01 real, 13 MB, 48.00 load
+[runlim] sample:		19.94 time, 20.01 real, 16 MB, 48.00 load
+[runlim] sample:		29.92 time, 30.01 real, 15 MB, 48.00 load
+[runlim] sample:		39.90 time, 40.01 real, 19 MB, 48.08 load
+[runlim] sample:		49.87 time, 50.01 real, 16 MB, 48.14 load
+[runlim] sample:		59.85 time, 60.01 real, 20 MB, 48.12 load
+[runlim] sample:		69.82 time, 70.01 real, 18 MB, 48.10 load
+[runlim] sample:		79.80 time, 80.01 real, 19 MB, 48.08 load
+[runlim] sample:		89.77 time, 90.01 real, 21 MB, 48.07 load
+[runlim] sample:		99.75 time, 100.01 real, 22 MB, 48.06 load
+[runlim] sample:		109.72 time, 110.01 real, 22 MB, 48.05 load
+[runlim] sample:		119.71 time, 120.01 real, 22 MB, 48.04 load
+[runlim] end:			Wed Jun  3 12:26:32 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			129.61 seconds
+[runlim] time:			129.31 seconds
+[runlim] space:			23 MB
+[runlim] load:			48.15 maximum
+[runlim] samples:		1296

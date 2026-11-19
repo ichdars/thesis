@@ -1,0 +1,24 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/g2-slp-synthesis-aes-top30-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 11:55:40 2026
+[runlim] child:			287149
+[runlim] sample:		9.93 time, 10.01 real, 80 MB, 48.39 load
+[runlim] sample:		19.93 time, 20.01 real, 49 MB, 48.33 load
+[runlim] sample:		29.93 time, 30.01 real, 84 MB, 48.28 load
+[runlim] end:			Wed Jun  3 11:56:14 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			34.21 seconds
+[runlim] time:			34.12 seconds
+[runlim] space:			102 MB
+[runlim] load:			48.43 maximum
+[runlim] samples:		342

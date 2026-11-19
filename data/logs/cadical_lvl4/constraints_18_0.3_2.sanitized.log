@@ -1,0 +1,188 @@
+c run.sh: index                
+c run.sh: benchmark            constraints_18_0.3_2.sanitized
+c run.sh: path                 /usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/constraints_18_0.3_2.sanitized-pre100k.cnf.xz
+c run.sh: job                  
+c run.sh: task                 
+c run.sh: host                 ccaexe11
+c run.sh: cpu                  AMD EPYC 7343 16-Core Processor
+c run.sh: os                   Linux ccaexe11 6.8.0-117-generic #117-Ubuntu SMP PREEMPT_DYNAMIC Tue May  5 19:26:24 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2025
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 3.0.0-0i 303aa169a39d43b1f758eef8599c459d6430d43b
+c g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0 -Wall -Wextra -O3 -DNDEBUG -DPROFILE_MODE
+c Wed Jun 3 10:32:42 AM CEST 2026 Linux ccaexe11 6.8.0-117-generic x86_64
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/constraints_18_0.3_2.sanitized-pre100k.cnf.xz'
+c opening pipe to read '/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/constraints_18_0.3_2.sanitized-pre100k.cnf.xz'
+c found '/usr/bin/xz' in path for 'xz'
+c found 'p cnf 3346 29525' header
+c parsed 29525 clauses in 0.23 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --profile=4                    (different from default '2')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reduction conflicts       size tier2      variables
+c         MB    restarts   redundant    glue  trail        remaining
+c          level     rate       size/glu tier1  irredundant
+c 
+c *  0.23 20  0 0   0  0    0    0 0.0 0 0 2 6  0% 29525 1009 100%
+c (  0.25 24  0 0   0  0    0    0 0.0 0 0 2 6  0% 29525 1009 100%
+c .  0.25 24  0 0   0  0    0    0 0.0 0 0 2 6  0% 29525 1009 100%
+c f  0.48 24  0 0   0  0    0    0 0.0 0 0 2 6  0% 28925 1477 146%
+c e  0.58 39  0 0   0  0    0    0 0.0 0 0 2 6  0% 23352 1410 140%
+c P  0.58 39  0 0   0  0    0    0 0.0 0 0 2 6  0% 23352 1410 140%
+c )  0.58 39  0 0   0  0    0    0 0.0 0 0 2 6  0% 23352 1410 140%
+c {  0.58 39  0 0   0  0    0    0 0.0 0 0 2 6  0% 23352 1410 140%
+c -  0.65 39 37 1  19  4  303  144 1.8 18 10 2 6 55% 23352 1410 140%
+c -  0.73 37 24 2  30  3  741  284 2.2 21 9 2 6 59% 23352 1410 140%
+c }  0.79 37 22 2  50  3 1002  496 2.2 21 10 2 6 58% 23352 1410 140%
+c [  0.79 37  0 2  50  0 1002  496 0.0 0 0 2 6  0% 23352 1410 140%
+c O  0.79 37  7 2  50  8 1003  497 1.3 4 3 2 6 15% 23352 1410 140%
+c -  0.85 37 16 3  50  2 1421  445 4.3 43 10 2 6 68% 23352 1410 140%
+c f  0.91 37 15 3  50  1 2001  801 4.6 47 10 2 6 68% 23364 1417 140%
+c -  0.97 37 16 4  51  1 2363  598 4.4 46 10 2 6 67% 23364 1417 140%
+c I  1.04 37 17 4  51  1 3004 1176 4.3 50 12 2 6 67% 23364 1417 140%
+c ]  1.08 37 18 4  52  1 3259 1394 4.0 49 12 2 6 66% 23364 1417 140%
+c {  1.08 37 22 4  52  3 3259 1394 2.2 21 10 2 6 58% 23364 1417 140%
+c -  1.17 37 25 5  83  4 3579  809 2.3 22 10 2 6 58% 23364 1417 140%
+c 
+c  seconds  reduction conflicts       size  tier2      variables
+c         MB    restarts   redundant     glue  trail        remaining
+c          level     rate       size/glue tier1  irredundant
+c 
+c p  1.32 37 21 5 119  3 4502 1533 2.4 22 9 2 6 60% 23364 1417 140%
+c u  1.69 48 21 5 119  3 4502 1499 2.4 22 9 2 6 60% 23364 1417 140%
+c v  1.69 48 21 5 119  3 4502 1491 2.4 22 9 2 6 60% 23364 1417 140%
+c w  1.70 48 21 5 119  3 4502 1490 2.4 22 9 2 6 60% 23364 1417 140%
+c x  1.70 48 21 5 119  3 4502 1490 2.4 22 9 2 6 60% 23364 1417 140%
+c t  1.70 48 21 5 119  3 4502 1490 2.4 22 9 2 6 60% 23363 1417 140%
+c f  1.71 48 21 5 119  3 4502 1442 2.4 22 9 2 6 60% 23388 1433 142%
+c -  1.79 41 19 6 123  3 5074 1566 2.4 22 9 5 9 60% 23388 1433 142%
+c F  1.99 41 19 6 187  3 6007 2397 2.5 23 9 5 9 60% 23388 1433 142%
+c }  2.05 41 19 6 199  3 6411 2707 2.5 22 9 5 9 60% 23388 1433 142%
+c 1  2.05 41 19 6 199  3 6411 2707 2.5 22 9 5 9 60% 23388 1433 142%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s SATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         1.09   59.63% search
+c         0.79   43.36% unstable
+c         0.75   41.32% propagate
+c         0.73   40.21% simplify
+c         0.61   33.40% propunstable
+c         0.45   24.46% sweep
+c         0.33   18.26% preprocess
+c         0.28   15.23% stable
+c         0.23   12.51% parse
+c         0.19   10.67% analyze
+c         0.18   10.01% sweepbackbone
+c         0.17    9.55% sweepflip
+c         0.17    9.44% sweepequivalences
+c         0.14    7.66% propstable
+c         0.12    6.37% analyzeunstable
+c         0.11    6.19% factor
+c         0.10    5.59% analyzestable
+c         0.10    5.33% fastelim
+c         0.06    3.50% shrink
+c         0.05    2.98% reduce
+c         0.05    2.86% collect
+c         0.05    2.69% vivify
+c         0.03    1.51% minimize
+c         0.02    1.17% bump
+c         0.02    1.03% lucky
+c         0.02    0.95% congruence
+c         0.01    0.74% decide
+c         0.01    0.72% connect
+c         0.01    0.66% extract
+c         0.01    0.47% extractands
+c         0.01    0.34% sweepsolve
+c         0.00    0.20% probe
+c         0.00    0.14% extractxors
+c         0.00    0.12% deduplicate
+c         0.00    0.09% transred
+c         0.00    0.08% backbone
+c         0.00    0.07% extractbinaries
+c         0.00    0.06% subsume
+c         0.00    0.05% restart
+c         0.00    0.04% extractites
+c         0.00    0.04% backward
+c         0.00    0.03% decompose
+c         0.00    0.03% congruencemerge
+c         0.00    0.01% copy
+c   =================================
+c         1.82   88.84% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c backbone:                  26910      1794.00 %  of vars
+c chronological:              1960        30.57 %  of conflicts
+c conflicts:                  6411      3520.38    per second
+c congruence:                    2      3205.50    interval
+c decisions:                 14256      7828.19    per second
+c eliminated:                   67         4.47 %  of all variables
+c factored:                    491        32.73 %  of variables
+c learned:                    6205        96.79 %  per conflict
+c learned_lits:             405545       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                 150090        37.01 %  learned literals
+c minishrunken:              56430        13.91 %  learned literals
+c otfs:                         27         0.42 %  of conflict
+c propagations:            1106321         0.61 M  per second
+c reduced:                    2433        37.95 %  per conflict
+c rephased:                      3      2137.00    interval
+c restarts:                    199        32.22    interval
+c stabilizing:                   1        35.14 %  of conflicts
+c subsumed:                    956         2.48 %  of all clauses
+c strengthened:                 42         0.11 %  of all clauses
+c ticks:                  42966931        43.13    propagation
+c vivified:                     59         0.15 %  of all clauses
+c weakened:                   5837       176.07    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ glue usage ] ---------------------------------------------------------
+c 
+c focused glue 5 used 833 clauses 10.00% accumulated 54.23% tier1
+c focused glue 6 used 699 clauses 8.395% accumulated 62.63%
+c focused glue 7 used 796 clauses 9.560% accumulated 72.19%
+c focused glue 8 used 571 clauses 6.858% accumulated 79.05%
+c focused glue 9 used 400 clauses 4.804% accumulated 83.85% tier2
+c 
+c stable glue 2 used 471 clauses 9.777% accumulated 13.59% tier1
+c stable glue 3 used 344 clauses 7.141% accumulated 20.73%
+c stable glue 4 used 218 clauses 4.525% accumulated 25.26%
+c stable glue 5 used 368 clauses 7.639% accumulated 32.90%
+c stable glue 6 used 355 clauses 7.369% accumulated 40.27% tier2
+c 
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         2.05    seconds
+c total real time since initialization:            2.16    seconds
+c maximum resident set size of process:           59.56    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 10
+c run.sh: finished             Wed Jun  3 11:31:16 AM CEST 2026

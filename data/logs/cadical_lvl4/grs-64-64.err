@@ -1,0 +1,43 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/grs-64-64-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 11:58:02 2026
+[runlim] child:			287240
+[runlim] sample:		9.93 time, 10.01 real, 75 MB, 48.13 load
+[runlim] sample:		19.94 time, 20.01 real, 70 MB, 48.11 load
+[runlim] sample:		29.93 time, 30.01 real, 82 MB, 48.09 load
+[runlim] sample:		39.93 time, 40.01 real, 71 MB, 48.08 load
+[runlim] sample:		49.93 time, 50.01 real, 79 MB, 48.06 load
+[runlim] sample:		59.93 time, 60.01 real, 83 MB, 48.05 load
+[runlim] sample:		69.93 time, 70.01 real, 72 MB, 48.05 load
+[runlim] sample:		79.93 time, 80.01 real, 87 MB, 48.04 load
+[runlim] sample:		89.93 time, 90.01 real, 71 MB, 48.03 load
+[runlim] sample:		99.93 time, 100.01 real, 72 MB, 48.03 load
+[runlim] sample:		109.93 time, 110.01 real, 72 MB, 48.02 load
+[runlim] sample:		119.93 time, 120.01 real, 82 MB, 48.10 load
+[runlim] sample:		129.93 time, 130.01 real, 85 MB, 48.08 load
+[runlim] sample:		139.93 time, 140.01 real, 86 MB, 48.07 load
+[runlim] sample:		149.93 time, 150.01 real, 92 MB, 48.06 load
+[runlim] sample:		159.93 time, 160.01 real, 71 MB, 48.05 load
+[runlim] sample:		169.93 time, 170.01 real, 71 MB, 48.04 load
+[runlim] sample:		179.93 time, 180.01 real, 77 MB, 48.03 load
+[runlim] sample:		189.93 time, 190.01 real, 77 MB, 48.03 load
+[runlim] sample:		199.92 time, 200.01 real, 57 MB, 48.02 load
+[runlim] sample:		209.92 time, 210.01 real, 76 MB, 48.02 load
+[runlim] sample:		219.92 time, 220.01 real, 80 MB, 48.02 load
+[runlim] end:			Wed Jun  3 12:01:51 2026
+[runlim] status:		ok
+[runlim] result:		20
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			229.03 seconds
+[runlim] time:			228.92 seconds
+[runlim] space:			106 MB
+[runlim] load:			48.15 maximum
+[runlim] samples:		2290

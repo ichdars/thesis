@@ -1,0 +1,50 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/T105.2.0-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 10:39:42 2026
+[runlim] child:			285082
+[runlim] sample:		9.93 time, 10.01 real, 1979 MB, 47.82 load
+[runlim] sample:		19.93 time, 20.01 real, 1559 MB, 47.92 load
+[runlim] sample:		29.93 time, 30.01 real, 1567 MB, 47.94 load
+[runlim] sample:		39.93 time, 40.01 real, 1361 MB, 48.03 load
+[runlim] sample:		49.92 time, 50.01 real, 1358 MB, 48.02 load
+[runlim] sample:		59.92 time, 60.01 real, 1317 MB, 48.02 load
+[runlim] sample:		69.92 time, 70.01 real, 1337 MB, 48.02 load
+[runlim] sample:		79.92 time, 80.01 real, 1389 MB, 48.01 load
+[runlim] sample:		89.91 time, 90.01 real, 1361 MB, 48.01 load
+[runlim] sample:		99.92 time, 100.01 real, 1419 MB, 48.01 load
+[runlim] sample:		109.92 time, 110.01 real, 1454 MB, 48.01 load
+[runlim] sample:		119.91 time, 120.01 real, 1376 MB, 48.00 load
+[runlim] sample:		129.92 time, 130.01 real, 1372 MB, 48.00 load
+[runlim] sample:		139.90 time, 140.01 real, 1532 MB, 48.08 load
+[runlim] sample:		149.90 time, 150.01 real, 1441 MB, 48.06 load
+[runlim] sample:		159.90 time, 160.01 real, 1387 MB, 48.05 load
+[runlim] sample:		169.90 time, 170.01 real, 1376 MB, 48.05 load
+[runlim] sample:		179.90 time, 180.01 real, 1388 MB, 48.04 load
+[runlim] sample:		189.90 time, 190.01 real, 1377 MB, 48.03 load
+[runlim] sample:		199.90 time, 200.01 real, 1376 MB, 48.03 load
+[runlim] sample:		209.89 time, 210.01 real, 1699 MB, 48.02 load
+[runlim] sample:		219.89 time, 220.01 real, 1691 MB, 48.02 load
+[runlim] sample:		229.89 time, 230.01 real, 1643 MB, 48.02 load
+[runlim] sample:		239.89 time, 240.01 real, 1741 MB, 48.01 load
+[runlim] sample:		249.89 time, 250.01 real, 1748 MB, 48.01 load
+[runlim] sample:		259.89 time, 260.01 real, 1748 MB, 48.09 load
+[runlim] sample:		269.88 time, 270.01 real, 1920 MB, 48.07 load
+[runlim] sample:		279.88 time, 280.01 real, 1747 MB, 48.14 load
+[runlim] sample:		289.88 time, 290.01 real, 1552 MB, 48.12 load
+[runlim] end:			Wed Jun  3 10:44:42 2026
+[runlim] status:		ok
+[runlim] result:		20
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			299.56 seconds
+[runlim] time:			299.39 seconds
+[runlim] space:			2155 MB
+[runlim] load:			48.14 maximum
+[runlim] samples:		2995

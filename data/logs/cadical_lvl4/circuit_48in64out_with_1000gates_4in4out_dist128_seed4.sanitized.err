@@ -1,0 +1,27 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/circuit_48in64out_with_1000gates_4in4out_dist128_seed4.sanitized-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 11:18:19 2026
+[runlim] child:			286113
+[runlim] sample:		9.93 time, 10.01 real, 16 MB, 48.16 load
+[runlim] sample:		19.93 time, 20.01 real, 19 MB, 48.22 load
+[runlim] sample:		29.93 time, 30.01 real, 21 MB, 48.18 load
+[runlim] sample:		39.93 time, 40.01 real, 21 MB, 48.15 load
+[runlim] sample:		49.93 time, 50.01 real, 22 MB, 48.13 load
+[runlim] sample:		59.93 time, 60.01 real, 21 MB, 48.11 load
+[runlim] end:			Wed Jun  3 11:19:25 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			66.12 seconds
+[runlim] time:			66.02 seconds
+[runlim] space:			23 MB
+[runlim] load:			48.22 maximum
+[runlim] samples:		661

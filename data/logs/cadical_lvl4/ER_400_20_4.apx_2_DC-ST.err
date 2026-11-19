@@ -1,0 +1,74 @@
+[runlim] version:		2.0.0rc1
+[runlim] host:			ccaexe11
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		256000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=10
+[runlim] argv[3]:		/usr/local/lradisk1/Benchmarks/sat/sc2024-preprocessed/preprocessed-kissat100k/ER_400_20_4.apx_2_DC-ST-pre100k.cnf.xz
+[runlim] start:			Wed Jun  3 10:34:42 2026
+[runlim] child:			284553
+[runlim] sample:		9.63 time, 11.81 real, 12 MB, 4.00 load
+[runlim] sample:		19.62 time, 21.81 real, 14 MB, 10.77 load
+[runlim] sample:		29.63 time, 31.81 real, 22 MB, 16.49 load
+[runlim] sample:		39.62 time, 41.81 real, 22 MB, 21.34 load
+[runlim] sample:		49.62 time, 51.81 real, 21 MB, 25.44 load
+[runlim] sample:		59.62 time, 61.81 real, 28 MB, 28.91 load
+[runlim] sample:		69.62 time, 71.81 real, 27 MB, 31.92 load
+[runlim] sample:		79.62 time, 81.81 real, 32 MB, 34.55 load
+[runlim] sample:		89.62 time, 91.81 real, 35 MB, 36.62 load
+[runlim] sample:		99.62 time, 101.81 real, 37 MB, 38.37 load
+[runlim] sample:		109.61 time, 111.81 real, 47 MB, 39.85 load
+[runlim] sample:		119.62 time, 121.81 real, 38 MB, 41.10 load
+[runlim] sample:		129.62 time, 131.81 real, 42 MB, 42.16 load
+[runlim] sample:		139.62 time, 141.81 real, 49 MB, 43.13 load
+[runlim] sample:		149.62 time, 151.81 real, 44 MB, 43.88 load
+[runlim] sample:		159.61 time, 161.81 real, 63 MB, 44.52 load
+[runlim] sample:		169.61 time, 171.81 real, 46 MB, 45.05 load
+[runlim] sample:		179.61 time, 181.81 real, 54 MB, 45.51 load
+[runlim] sample:		189.62 time, 191.81 real, 47 MB, 45.89 load
+[runlim] sample:		199.61 time, 201.81 real, 46 MB, 46.22 load
+[runlim] sample:		209.61 time, 211.81 real, 51 MB, 46.49 load
+[runlim] sample:		219.61 time, 221.81 real, 51 MB, 46.72 load
+[runlim] sample:		229.61 time, 231.81 real, 51 MB, 46.92 load
+[runlim] sample:		239.61 time, 241.81 real, 51 MB, 47.09 load
+[runlim] sample:		249.61 time, 251.81 real, 51 MB, 47.23 load
+[runlim] sample:		259.61 time, 261.81 real, 51 MB, 47.35 load
+[runlim] sample:		269.62 time, 271.81 real, 51 MB, 47.45 load
+[runlim] sample:		279.61 time, 281.81 real, 51 MB, 47.53 load
+[runlim] sample:		289.61 time, 291.81 real, 51 MB, 47.75 load
+[runlim] sample:		299.62 time, 301.81 real, 51 MB, 47.79 load
+[runlim] sample:		309.61 time, 311.81 real, 51 MB, 47.82 load
+[runlim] sample:		319.61 time, 321.81 real, 51 MB, 47.92 load
+[runlim] sample:		329.61 time, 331.81 real, 51 MB, 47.94 load
+[runlim] sample:		339.61 time, 341.81 real, 51 MB, 48.03 load
+[runlim] sample:		349.61 time, 351.81 real, 51 MB, 48.02 load
+[runlim] sample:		359.61 time, 361.81 real, 51 MB, 48.02 load
+[runlim] sample:		369.61 time, 371.81 real, 51 MB, 48.02 load
+[runlim] sample:		379.61 time, 381.81 real, 51 MB, 48.01 load
+[runlim] sample:		389.61 time, 391.81 real, 51 MB, 48.01 load
+[runlim] sample:		399.61 time, 401.81 real, 51 MB, 48.01 load
+[runlim] sample:		409.61 time, 411.81 real, 51 MB, 48.01 load
+[runlim] sample:		419.61 time, 421.81 real, 51 MB, 48.00 load
+[runlim] sample:		429.61 time, 431.81 real, 51 MB, 48.00 load
+[runlim] sample:		439.61 time, 441.81 real, 51 MB, 48.08 load
+[runlim] sample:		449.61 time, 451.81 real, 51 MB, 48.06 load
+[runlim] sample:		459.60 time, 461.81 real, 51 MB, 48.05 load
+[runlim] sample:		469.60 time, 471.81 real, 51 MB, 48.05 load
+[runlim] sample:		479.60 time, 481.81 real, 51 MB, 48.04 load
+[runlim] sample:		489.60 time, 491.81 real, 51 MB, 48.03 load
+[runlim] sample:		499.61 time, 501.81 real, 51 MB, 48.03 load
+[runlim] sample:		509.61 time, 511.81 real, 51 MB, 48.02 load
+[runlim] sample:		519.61 time, 521.81 real, 51 MB, 48.02 load
+[runlim] sample:		529.60 time, 531.81 real, 51 MB, 48.02 load
+[runlim] end:			Wed Jun  3 10:43:36 2026
+[runlim] status:		ok
+[runlim] result:		20
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			534.48 seconds
+[runlim] time:			532.20 seconds
+[runlim] space:			68 MB
+[runlim] load:			48.08 maximum
+[runlim] samples:		5326
