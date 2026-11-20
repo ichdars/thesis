@@ -37,22 +37,3 @@ def download(df, target: Path) -> None:
                 for chunk in r.iter_content(chunk_size= 1 << 20):
                     f.write(chunk)
         tmp.rename(out)
-
-
-if __name__ == "__main__":
-    parser: ArgumentParser = ArgumentParser()
-
-    parser.add_argument("--log", type=Path)
-    parser.add_argument("--path", type=Path)
-
-    # args = parser.parse_args()
-
-    # log_data = parse_path(args.path)
-
-    df = load_data_frame()
-
-    download(df, Path("../data/gbd_instances/main_2024"))
-
-    # print(log_data)
-
-    # print(compare_names(log_data, load_data_frame()))
