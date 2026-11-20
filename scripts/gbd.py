@@ -44,7 +44,7 @@ def cast_columns(df: pl.DataFrame) -> pl.DataFrame:
 
     return casted 
 
-def load_data_frame(dbs: list[str] = ['../data/meta.db','../data/base.db'], track: str = "main_2024", feats: list[str] | None = None) -> pl.DataFrame:
+def load_data_frame(dbs: list[str] = ['../data/meta.db','../data/base.db'], track: str = "main_2024", feats: list[str] | None = None) -> tuple[pl.DataFrame, list[str]]:
     
     with GBD(dbs) as gbd:
 
@@ -59,11 +59,13 @@ def load_data_frame(dbs: list[str] = ['../data/meta.db','../data/base.db'], trac
             resolve=feat
         )
 
+        hashes: list[str] = df["hash"].to_list()
+
     casted = cast_columns(df)
 
     validate(casted)
 
-    return casted
+    return casted, hashes
 
 
 if __name__ == "__main__":
