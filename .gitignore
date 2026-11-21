@@ -4,6 +4,12 @@ data/instances/
 *.cnf.xz
 *.part
 
+/data/cnfstats
+*.out
+*.err
+*.csv
+
+
 # GBD-Datenbanken (groß, jederzeit neu ladbar)
 *.db
 
