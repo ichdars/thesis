@@ -3,25 +3,23 @@ import subprocess
 import pandas as pd
 
 CNF_SCRIPT = str(Path(__file__).resolve().parent.parent.parent / "cnfstats" / "cnfstats")
-SUFFIXES = (".xz", ".gz.", ".bz2", ".cnf")
+SUFFIXES = (".xz", ".gz", ".bz2", ".cnf")
 CNF_KEYS = {
     "variables": int,
     "clauses": int,
     "clause-variable-ratio": float,
-    "Lines": int,
     "bytes": int,
     "lines": int,
-    "bytes": int,
     "literals": int,
     "clashing": int,
     "duplicated": int,
     "maximum-literal-occurrence": int,
     "maximum-variable-occurrence": int,
     "average-size": float,
-    "sum-of-size-square": int,
+    "sum-of-size-squares": int,
 }
 
-KEYS_WITH_COUNT = {"smallest-size", "largest-size", "median-size"}
+KEYS_WITH_COUNT = {"smallest-size", "largest-size"}
 
 
 def cut_suffix(path: Path):
@@ -64,7 +62,7 @@ def cnf_stats_to_dict(cnf_stats: str, prefix: str="cnfstats") -> dict:
         key, val = vals[1], vals[2:]
 
         if key == "version":
-            stats["version"] = val
+            stats["version"] = val[0]
 
         elif key in CNF_KEYS:
             stats[key] = CNF_KEYS[key](val[0])
@@ -74,12 +72,12 @@ def cnf_stats_to_dict(cnf_stats: str, prefix: str="cnfstats") -> dict:
             stats[f"{key}-count"] = int(val[1].lstrip("#"))
 
         else:
-            continue
+            raise ValueError(f"unkown stat: {val}")
 
     return stats
 
 
-def stats_from_suite(track: str, instance_dir: Path, out_dir, binary=CNF_SCRIPT) -> pd.DataFrame:
+def stats_from_suite(track: str, instance_dir: Path, out_dir, families: dict[str, str] | None = None ,binary=CNF_SCRIPT) -> pd.DataFrame:
 
     out_dir = Path(out_dir)
     track_dir = out_dir / track
@@ -115,12 +113,12 @@ def stats_from_suite(track: str, instance_dir: Path, out_dir, binary=CNF_SCRIPT)
             row = {"status" : "ok", **cnf_stats_to_dict(out_file.read_text(encoding="utf-8"))}
         else:
             row = {"status": "error"}
-        rows.append({"benchmark": name, **row})
+        rows.append({"benchmark": name, "family": (families or {}).get(name) ,**row})
 
-        df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows)
 
-        df.columns = [c if c == "benchmark" else "cs_" + c.replace("-", "_") for c in df.columns]
+    df.columns = [c if c in ("benchmark", "family") else "cs_" + c.replace("-", "_") for c in df.columns]
 
-        df.to_csv(track_dir / "cnfstats.csv", index=False)
+    df.to_csv(track_dir / "cnfstats.csv", index=False)
 
     return df

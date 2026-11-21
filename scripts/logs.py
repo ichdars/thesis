@@ -10,7 +10,8 @@ FIELDS = {
     (r"c run\.sh: benchmark",  "benchmark",    lambda x : x.split()[-1]),
     ("c total process time",   "process time", lambda x: float(x.split()[-2])), 
     ("c total real time",      "real time",    lambda x: float(x.split()[-2])),
-    (r"c \S+ SAT Solver",      "solver",       lambda x: x.split()[1].lower())
+    (r"c \S+ SAT Solver",      "solver",       lambda x: x.split()[1].lower()),
+    (r"c (SATISFIABLE|UNSATISFIABLE|UNKNOWN)$","status", lambda x: x.split([1]))
 
 }
 

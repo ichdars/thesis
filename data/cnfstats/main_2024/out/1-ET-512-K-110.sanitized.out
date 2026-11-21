@@ -1,0 +1,29 @@
+cnfstats version 0.0.2
+cnfstats cnf /home/maxi/thesis/data/gbd_instances/main_2024/1-ET-512-K-110.sanitized.cnf.xz
+cnfstats variables 51349
+cnfstats clauses 2547402
+cnfstats clause-variable-ratio 49.610
+cnfstats lines 2547403
+cnfstats bytes 41137934
+cnfstats literals 5435959
+cnfstats clashing 0
+cnfstats duplicated 0
+cnfstats maximum-literal-occurrence 364
+cnfstats maximum-variable-occurrence 696
+cnfstats smallest-size 1 #6106
+cnfstats median-size 2 #2237235
+cnfstats average-size 2.134
+cnfstats sum-of-size-squares 16196527
+cnfstats largest-size 111 #293
+cnfstats sizes[1] 6106 0.24%
+cnfstats sizes[2] 2237235 87.82%
+cnfstats sizes[3] 303554 11.92%
+cnfstats sizes[4] 2 0.00%
+cnfstats sizes[5] 2 0.00%
+cnfstats sizes[6] 2 0.00%
+cnfstats sizes[7] 2 0.00%
+cnfstats sizes[8] 2 0.00%
+cnfstats sizes[9] 2 0.00%
+cnfstats log10[1] 2540803 99.74% [2..10]
+cnfstats log10[2] 180 0.01% [11..100]
+cnfstats log10[3] 313 0.01% [101..1000]

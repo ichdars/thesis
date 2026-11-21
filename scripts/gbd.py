@@ -2,7 +2,7 @@ import re
 from gbd_core.api import GBD
 import polars as pl
 
-COLS_TO_CHECK = ["hash", "family", "family"]
+COLS_TO_CHECK = ["hash", "family"]
 
 
 def validate(df: pl.DataFrame) -> None: 
@@ -66,8 +66,3 @@ def load_data_frame(dbs: list[str] = ['../data/meta.db','../data/base.db'], trac
     validate(casted)
 
     return casted, hashes
-
-
-if __name__ == "__main__":
-    df = load_data_frame()
-    print(df)

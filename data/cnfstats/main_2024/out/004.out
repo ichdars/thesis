@@ -1,0 +1,26 @@
+cnfstats version 0.0.2
+cnfstats cnf /home/maxi/thesis/data/gbd_instances/main_2024/004.cnf.xz
+cnfstats variables 4288
+cnfstats clauses 132576
+cnfstats clause-variable-ratio 30.918
+cnfstats lines 132577
+cnfstats bytes 4913074
+cnfstats literals 873631
+cnfstats clashing 0
+cnfstats duplicated 0
+cnfstats maximum-literal-occurrence 1301
+cnfstats maximum-variable-occurrence 2601
+cnfstats smallest-size 1 #352
+cnfstats median-size 7 #65550
+cnfstats average-size 6.590
+cnfstats sum-of-size-squares 6009623
+cnfstats largest-size 8 #32430
+cnfstats sizes[1] 352 0.27%
+cnfstats sizes[2] 33 0.02%
+cnfstats sizes[3] 4618 3.48%
+cnfstats sizes[4] 8069 6.09%
+cnfstats sizes[5] 20351 15.35%
+cnfstats sizes[6] 1173 0.88%
+cnfstats sizes[7] 65550 49.44%
+cnfstats sizes[8] 32430 24.46%
+cnfstats log10[1] 132224 99.73% [2..10]

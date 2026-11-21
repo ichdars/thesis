@@ -31,7 +31,7 @@ def download(df, target: Path) -> None:
 
         tmp = out.with_suffix(out.suffix + ".part")
 
-        with  requests.get(URL.format(hash), stream=True, timeout=60) as r:
+        with requests.get(URL.format(hash), stream=True, timeout=60) as r:
             r.raise_for_status()
             with tmp.open("wb") as f:
                 for chunk in r.iter_content(chunk_size= 1 << 20):

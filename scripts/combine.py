@@ -19,4 +19,3 @@ def merge(log_data: Path, cnfstats_gbd: str | Path):
     )
 
     return merged
-
