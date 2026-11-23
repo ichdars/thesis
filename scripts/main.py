@@ -21,7 +21,7 @@ def run(logs: Path, track: str):
 
     instance_dir = data_dir / "gbd_instances" / track
     stats_dir = data_dir / "cnfstats"
-    csv_dir = stats_dir / track /"cnfstats.csv"
+    combined_dir = stats_dir / track / "combined.csv"
 
     casted_df, _ = load_data_frame(track=track)
 
@@ -31,9 +31,9 @@ def run(logs: Path, track: str):
     families = dict(zip(names, casted_df["family"]))
     df = stats_from_suite(track=track, instance_dir=instance_dir, out_dir=stats_dir, families=families)
 
-    merged_df: pd.DataFrame = merge(logs, csv_dir)
+    merged_df: pd.DataFrame = merge(logs, df)
 
-    print(merged_df["_merge"].value_counts())
+    merged_df.to_csv(combined_dir, index=False)
 
     return merged_df
 

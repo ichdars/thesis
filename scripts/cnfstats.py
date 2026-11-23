@@ -19,7 +19,9 @@ CNF_KEYS = {
     "sum-of-size-squares": int,
 }
 
-KEYS_WITH_COUNT = {"smallest-size", "largest-size"}
+KEYS_WITH_COUNT = {"smallest-size": (int, int), "largest-size": (int, int), "median-size": (float, float)}
+
+PREFIX_TO_SKIP = ("sizes[", "log10[", "cnf")
 
 
 def cut_suffix(path: Path):
@@ -61,15 +63,23 @@ def cnf_stats_to_dict(cnf_stats: str, prefix: str="cnfstats") -> dict:
             raise ValueError(f"uncommon line: {line}")
         key, val = vals[1], vals[2:]
 
-        if key == "version":
-            stats["version"] = val[0]
+        if key in "version":
+            stats[key] = "".join(val)
 
         elif key in CNF_KEYS:
             stats[key] = CNF_KEYS[key](val[0])
 
         elif key in KEYS_WITH_COUNT:
-            stats[key] = int(val[0])
-            stats[f"{key}-count"] = int(val[1].lstrip("#"))
+            val_type, counter_type = KEYS_WITH_COUNT[key]
+
+            if len(val) < 2:
+                raise ValueError(f"missing count for {key!r}: {line!r}")
+
+            stats[key] = val_type(val[0])
+            stats[f"{key}-count"] = counter_type(val[1].lstrip("#"))
+
+        elif key.startswith(PREFIX_TO_SKIP):
+            continue
 
         else:
             raise ValueError(f"unkown stat: {val}")
@@ -93,7 +103,7 @@ def stats_from_suite(track: str, instance_dir: Path, out_dir, families: dict[str
     duplicates = {dup for dup in names if names.count(dup) > 1}
 
     if duplicates:
-        raise ValueError(f"benchmark names not unique: {sorted(duplicates)}")
+        raise ValueError(f"benchmark nams not unique: {sorted(duplicates)}")
 
     rows = []
 
