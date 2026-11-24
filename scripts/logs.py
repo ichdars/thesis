@@ -11,8 +11,8 @@ FIELDS = {
     ("c total process time",   "process time", lambda x: float(x.split()[-2])), 
     ("c total real time",      "real time",    lambda x: float(x.split()[-2])),
     (r"c \S+ SAT Solver",      "solver",       lambda x: x.split()[1].lower()),
-    (r"s (SATISFIABLE|UNSATISFIABLE|UNKNOWN)$","status", lambda x: x.split()[1])
-
+    (r"s (SATISFIABLE|UNSATISFIABLE)$","status", lambda x: x.split()[1]),
+    (r"c UNKNOWN$", "status", lambda x: "UNKNOWN"),
 }
 
 

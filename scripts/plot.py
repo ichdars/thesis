@@ -27,14 +27,18 @@ def family_plot(data: pd.DataFrame, solver: str, min_fams: int = 5, time_limit: 
     for index, family in enumerate(order):
 
         group = data[data["family"] == family]
-        solved = group[group["status"] != "UNKNOWN"]
-        not_solved = group[group["status"] == "UNKNOWN"]
+        sat = group[group["status"] == "SATISFIABLE"]
+        unsat = group[group["status"] == "UNSATISFIABLE"]
+        unknown = group[group["status"] == "UNKNOWN"]
 
-        x_solved = index + rng.uniform(-0.3, 0.3, size=len(solved))
-        x_not_solved = index + rng.uniform(-0.3, 0.3, size=len(not_solved))
+        x_sat = index + rng.uniform(-0.3, 0.3, size=len(sat))
+        x_unsat = index + rng.uniform(-0.3, 0.3, size=len(unsat))
+        x_unknown = index + rng.uniform(-0.3, 0.3, size=len(unknown))
+
         
-        ax.scatter(x_solved, solved["real_time"], marker="^", s=14, alpha=0.6, color="tab:red", label="solved" if index == 0 else None)
-        ax.scatter(x_not_solved, not_solved["real_time"], marker="^", s=14, alpha=0.6, color="tab:red", label="solved" if index == 0 else None)
+        ax.scatter(x_sat, sat["real_time"], marker="^", s=14, alpha=0.6, color="tab:green", label="SAT" if index == 0 else None)
+        ax.scatter(x_unsat, unsat["real_time"], marker="o", s=14, alpha=0.6, color="tab:red", label="UNSAT" if index == 0 else None)
+        ax.scatter(x_unknown, unknown["real_time"], marker="x", s=14, alpha=0.6, color="tab:purple", label="UNKNOWN" if index == 0 else None)
         
         ax.hlines(y=group["real_time"].median(), xmin=index - 0.35, xmax=index + 0.35, color="black", linewidth=2)
  
