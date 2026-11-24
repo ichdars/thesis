@@ -107,20 +107,70 @@ def family_to_size_plot(data: pd.DataFrame, solver: str, min_fams: int = 5, size
     return fig
 
 
+def stat_box_plot(data: pd.DataFrame, solver: str, time_limit: int = 5000, min_fams: int = 5, stat: str = "cs_bytes", x_label: str = "Bytes (from GBD cnf)"):
+
+    data = data[data["solver"] == solver].dropna(subset=[stat])
+
+    low = int(np.floor(np.log10(data[stat].min())))
+    high = int(np.ceil(np.log10(data[stat].max())))
+    edges = 10.0 ** np.arange(low, high + 1)
+    data = data.assign(bin=pd.cut(data[stat], edges, right=False)) # type: ignore   
+    bins = data["bin"].cat.categories
+    groups = [data[data["bin"] == b] for b in bins]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    rng = np.random.default_rng(0)
+
+    ax.boxplot([group["real_time"] for group in groups], positions=range(len(bins)), widths=0.6, showfliers=False)
+
+    for index, group in enumerate(groups):
+        x = index + rng.uniform(-0.25, 0.25, size=len(group))
+        sat = (group["status"] == "SATISFIABLE").to_numpy()
+        unsat = (group["status"] == "UNSATISFIABLE").to_numpy()
+        unknown = (group["status"] == "UNKNOWN").to_numpy()
+
+        ax.scatter(x[sat], group["real_time"][sat], marker="^", s=10, alpha=0.6, color="tab:green", zorder=3, label="SAT" if index == 0 else None)
+        ax.scatter(x[unsat], group["real_time"][unsat], marker="o", s=10, alpha=0.6, color="tab:red", zorder=3, label="UNSAT" if index == 0 else None)
+        ax.scatter(x[unknown], group["real_time"][unknown], marker="x", s=10, alpha=0.6, color="tab:purple", zorder=3, label="UNKNOWN" if index == 0 else None)
+    
+    
+    ax.axhline(time_limit, linestyle="--", color="grey", linewidth=1)
+    ax.set_yscale("log")
+    labels = [f"$10^{{{int(np.log10(b.left))}}}$–$10^{{{int(np.log10(b.right))}}}$\n(n={len(g)})" for b, g in zip(bins, groups)]
+    ax.set_xticks(range(len(bins)), labels=labels)
+
+    ax.set_xlabel(x_label)
+    ax.set_ylabel("Total Realtime [s]")
+    ax.set_title(f"{solver}: runtime by {stat}")
+
+    ax.legend(fontsize=8)
+    ax.grid(axis="y", alpha=0.3)
+
+    fig.tight_layout()
+
+    return fig 
+
+
 if __name__ == "__main__": 
     parser: ArgumentParser = ArgumentParser()
     parser.add_argument("--csv", type=Path)
     parser.add_argument("--o", type=Path, help="Directory to save the plot")
     parser.add_argument("--solver", type=str, default="cadical")
+    parser.add_argument("--stat", type=str, help="stat to do the boxplot with", default="cs_bytes")
+
     args = parser.parse_args()
 
     df = load_combined(args.csv)
     real_time_plot = family_to_realtime_plot(df, args.solver)
     family_size_plot = family_to_size_plot(df, args.solver)
+    box_plot = stat_box_plot(df, args.solver, stat=args.stat)
 
     if args.o is not None:
         args.o.mkdir(parents=True, exist_ok=True)
-        real_time_plot.savefig(args.o / f"runtime_family_{args.solver}.pdf", bbox_inches="tight")
-        family_size_plot.savefig(args.o / f"family_size_{args.solver}.pdf", bbox_inches="tight")
+        (args.o / "families").mkdir(parents=True, exist_ok=True)
+        (args.o / "cnfstats").mkdir(parents=True, exist_ok=True)
+        real_time_plot.savefig(args.o / "families" / f"runtime_family_{args.solver}.pdf", bbox_inches="tight")
+        family_size_plot.savefig(args.o / "families" / f"family_size_{args.solver}.pdf", bbox_inches="tight")
+        box_plot.savefig(args.o / "cnfstats" / f"bytes_boxplot_{args.solver}.pdf", bbox_inches="tight")
     else:
         plt.show()
