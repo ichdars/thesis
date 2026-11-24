@@ -11,13 +11,18 @@ def load_combined(csv: Path) -> pd.DataFrame:
     return pd.read_csv(csv, dtype={"benchmark": str})
 
 
-def family_plot(data: pd.DataFrame, solver: str, min_fams: int = 5, time_limit: float = 5000):
+def prepare(data: pd.DataFrame, solver: str, min_size: int):
 
     data = data[data["solver"] == solver]
 
     family_count = data["family"].value_counts()
-    fams_to_keep = family_count[family_count >= min_fams].index
-    data = data[data["family"].isin(fams_to_keep)]
+    fams_to_keep = family_count[family_count >= min_size].index
+    return data[data["family"].isin(fams_to_keep)], family_count
+
+
+def family_to_realtime_plot(data: pd.DataFrame, solver: str, min_fams: int = 5, time_limit: float = 5000):
+
+    data, family_count = prepare(data, solver=solver, min_size=min_fams)
 
     order = data.groupby("family")["real_time"].median().sort_values().index
 
@@ -60,6 +65,48 @@ def family_plot(data: pd.DataFrame, solver: str, min_fams: int = 5, time_limit: 
     return fig
 
 
+def family_to_size_plot(data: pd.DataFrame, solver: str, min_fams: int = 5, size_stat: str = "cs_clauses", time_limit: int = 5000):
+
+    data, fam_count = prepare(data, solver=solver, min_size=min_fams)
+    data = data.dropna(subset=[size_stat])
+
+    families = data.groupby("family")["real_time"].median().sort_values().index
+
+    colors = plt.get_cmap("tab10").colors # type: ignore
+    markers = ["o", "s"]
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    for index, family in enumerate(families):
+
+        group = data[data["family"] == family ]
+        sat = group[group["status"] == "SATISFIABLE" ]
+        unsat = group[group["status"] == "UNSATISFIABLE" ]
+        unknown = group[group["status"] == "UNKNWON"]
+
+        color = colors[index % 10]
+        marker = markers[index // 10 % 2]
+
+        ax.scatter(sat[size_stat], sat["real_time"], marker=marker, s=22, color=color, alpha=0.8, zorder=3, label=f"{family} (n={fam_count[family]})")
+        ax.scatter(unsat[size_stat], unsat["real_time"], marker=marker, s=22, facecolor="none", edgecolors=color, zorder=3)
+        ax.scatter(unknown[size_stat], unknown["real_time"], marker=marker, s=22, facecolor="none", edgecolors=color, zorder=3)
+        
+    ax.axhline(time_limit, linestyle="--", color="grey", linewidth=1)
+
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+
+    ax.set_xlabel("Clauses (GBD instance)")
+    ax.set_ylabel("Runtime (Real Time) [s]")
+
+    ax.legend(loc="upper left", bbox_to_anchor=(1.01, 1), fontsize=8, title="family (hollow = timeout)", title_fontsize=8)
+    ax.grid(alpha=0.3)
+
+    fig.tight_layout()
+
+    return fig
+
+
 if __name__ == "__main__": 
     parser: ArgumentParser = ArgumentParser()
     parser.add_argument("--csv", type=Path)
@@ -68,10 +115,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     df = load_combined(args.csv)
-    plot = family_plot(df, args.solver)
+    real_time_plot = family_to_realtime_plot(df, args.solver)
+    family_size_plot = family_to_size_plot(df, args.solver)
 
     if args.o is not None:
         args.o.mkdir(parents=True, exist_ok=True)
-        plot.savefig(args.o / f"runtime_family_{args.solver}.pdf", bbox_inches="tight")
+        real_time_plot.savefig(args.o / f"runtime_family_{args.solver}.pdf", bbox_inches="tight")
+        family_size_plot.savefig(args.o / f"family_size_{args.solver}.pdf", bbox_inches="tight")
     else:
         plt.show()
