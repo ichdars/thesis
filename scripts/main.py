@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from gbd import *
+from plot import *
 from download import *
 from cnfstats import *
 from logs import *
@@ -43,4 +44,6 @@ if __name__ == "__main__":
     parser: ArgumentParser = build_parser()
     args = parser.parse_args()
 
-    print(run(args.logs, args.track))
+    data = run(args.logs, args.track)
+
+    # print(run(args.logs, args.track))
